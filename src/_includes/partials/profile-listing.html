@@ -1,0 +1,10 @@
+
+
+  <article class="flow-space profiles">
+    <{{ headingLevel if headingLevel else 'h2' }}>
+      <a href="{{ item.url | slug }}">{{ item.data.title | safe }}</a>
+    </{{ headingLevel if headingLevel else 'h2' }}>
+    <p class="meta">
+      A {{ item.data.distance }} race for {{ item.data.condition }} over the {{ item.data.surface }}{% if item.data.track %} at {{ item.data.track }}{% endif %}.
+    </p>
+  </article>

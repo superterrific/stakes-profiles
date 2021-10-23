@@ -1,0 +1,81 @@
+    <article class="section-intro">
+      <noscript>
+        <p class="no-js-text">
+          Unfortunatley this site requires JavaScript to render charts. The summary text for each section will give you an overview of the data displayed in the charts. My sincere apologies for not providing a better JavaScript-free experience.
+        </p>
+      </noscript>
+      <div>
+        <h2 class="visually-hidden">Introduction</h2>
+      </div>
+      <div class="intro flow">
+        <p class="intro-text">
+          The {{ title }} is a {{ distance }} race over the {{ surface }} for {{ condition }}{% if track %} at {{ track }}{% endif %}. {{ inaugurated | safe }}.
+        </p>
+        <p class="visually-hidden">
+          A note to screen reader users. The interactive charts on this site are built using Google Charts. There are two major elements to each chart, the images used to display the chart and a tabular representation of the data within the chart. Unfortunatley the charts are structured to announce all of the images before announcing the tabular data. In some cases this will mean upwards of 50 images get announced before the data. If you'd like to provide feedback please visit the Accessibility Statement for information.
+        </p>
+        <p class="intro-text-sm">Below is a look at data from a variety of angles to see what has produced winners in the <span class="race-name">{{ title }}</span> from 1991-{{ lastYear }}.</p>
+      </div>
+
+      <hr role="presentation">
+
+      <nav class="toc">
+        <h3>Table of Contents</h3>
+        <p class="meta"><a href="#winners-odds-payouts-1991-{{ lastYear }}">Skip Table of Contents</a></p>
+        <ul>
+          <li>
+            <a href="#winners-odds-payouts-1991-{{ lastYear }}">Winners Odds & Payouts 1991-{{ lastYear }}</a>
+          </li>
+          <li>
+            <a href="#winners-bettors-choice-field-size-1991-{{ lastYear }}">Winners Bettors’ Choice and Field Size 1991-{{ lastYear }}</a>
+          </li>
+          <li>
+            <a href="#winning-running-styles-1991-{{ lastYear }}">Winning Running Styles 1991-{{ lastYear }}</a>
+          </li>
+          <li>
+            <a href="#winners-last-track-raced-days-since-1991-{{ lastYear }}">Winners Last Track & Days Since 1991-{{ lastYear }}</a>
+          </li>
+          <li>
+            <a href="#winners-placing-in-prior-race-1991-{{ lastYear }}">Winners Placing in Prior Race 1991-{{ lastYear }}</a>
+          </li>
+          {% if careerStarts %}
+          <li>
+            <a href="#winners-prior-career-starts-1991-{{ lastYear }}">Winners Prior Career Starts 1991-{{ lastYear }}</a>
+          </li>
+          {% endif %}
+          {% if ageIntro %}
+          <li>
+            <a href="#winners-by-age-1991-{{ lastYear }}">Winners By Age 1991-{{ lastYear }}</a>
+          </li>
+          {% endif %}
+          {% if runbackIntro %}
+          <li>
+            <a href="#multiple-winners-run-backs-1991-{{ lastYear }}">Multiple Winners & Run Backs 1991-{{ lastYear }}</a>
+          </li>
+          {% endif %}
+          {% if fillies %}
+          <li>
+            <a href="#fillies-mares-1991-{{ lastYear }}">Fillies and Mares 1991-{{ lastYear }}</a>
+          </li>
+          {% endif %}
+          <li>
+            <a href="#summary">Summary</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="flow content">
+        <p>
+          Charts are interactive, hover over or touch bars and lines for more information.
+        </p>
+
+        <p class="meta">
+          All data is via <a href="http://equibase.com">Equibase</a>.
+        </p>
+      </div>
+
+      <div id="small-screen" class="disclaimer">
+        <h2>Heads Up!</h2>
+        <p>Some charts will be more legible viewed in landscape.</p>
+      </div>
+    </article>

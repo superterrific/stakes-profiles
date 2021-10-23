@@ -1,0 +1,104 @@
+{% extends "layouts/base.html" %}
+{% set css %}
+  {% include "css/global.css" %}
+  {% include "css/profiles.css" %}
+  {% include "css/content.css" %}
+{% endset %}
+
+{% set previousPost = collections.profiles | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.profiles | getNextCollectionItem(page) %}
+
+{% block content %}
+    <div class="wrapper-content">
+      <div class="flow">
+        <h1>{{ title }} Stakes Profile</h1>
+        <p class="meta">Originally published on <time datetime="{{ date | w3Date }}">{{ date | longDate }}</time></p>
+        <div class="disclaimer">
+          <h2>Disclaimer</h2>
+          <p>All data was manually compiled and is subject to human error.</p>
+        </div>
+        <nav>
+          <span class="visually-hidden">A list of tags for this profile.</span>
+          <ul class="tag-list tag-list-summary" role="list">
+            {% for tag in tags %}
+              <li>
+                <a href="/tag/{{ tag | slug }}/">{{ tag }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+
+      {% include 'partials/intro.html'%}
+      <hr role="presentation">
+      {% include 'partials/odds-payouts.html'%}
+      <hr role="presentation">
+      {% include 'partials/bettors-choice.html'%}
+      <hr role="presentation">
+      {% include 'partials/running-style.html'%}
+      <hr role="presentation">
+      {% include 'partials/last-track.html'%}
+      <hr role="presentation">
+      {% include 'partials/last-out.html'%}
+      <hr role="presentation">
+
+      {% if careerStarts %}
+      {% include 'partials/career-starts.html'%}
+      <hr role="presentation">
+      {% endif %}
+
+      {% if ageIntro %}
+      {% include 'partials/age.html'%}
+      <hr role="presentation">
+      {% endif %}
+
+      {% if runbackIntro %}
+      {% include 'partials/runbacks.html'%}
+      <hr role="presentation">
+      {% endif %}
+
+      {% if fillies %}
+      {% include 'partials/fillies.html'%}
+      <hr role="presentation">
+      {% endif %}
+
+      <article class="content">
+        <div class="heading-wrapper">
+          <h2 id="summary">Summary</h2>
+          <a class="anchor-link" href="#summary">
+            <span class="anchor-icon">
+              {% include 'partials/anchor-icon.html' %}
+            </span>
+            <span class="visually-hidden">(permalink)</span>
+          </a>
+        </div>
+        {{ content | safe }}
+      </article>
+
+      {% if nextPost or previousPost %}
+      <nav class="splitter"  aria-label="Pagination">
+        <p class="post-nav-item">
+          {% if previousPost %}
+            <a href="{{ previousPost.url }}"><svg xmlns="http://www.w3.org/2000/svg" class="icon-1-25x pagination-arrow" width="20" height="20"  viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--color-blue-dark)" fill="none" stroke-linecap="round" aria-hidden="true" focusable="false" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <line x1="5" y1="12" x2="9" y2="16" />
+            <line x1="5" y1="12" x2="9" y2="8" />
+          </svg>
+        {{ previousPost.data.title }}</a>
+          {% endif %}
+        </p>
+        <p class="post-nav-item">
+          {% if nextPost %}
+          <a href="{{ nextPost.url }}">{{ nextPost.data.title }}
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-1-25x pagination-arrow" width="20" height="20"  viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--color-blue-dark)" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <line x1="15" y1="16" x2="19" y2="12" />
+            <line x1="15" y1="8" x2="19" y2="12" /></a>
+          </p>
+        {% endif %}
+      </nav>
+      {% endif %}
+    </div>
+{% endblock %}

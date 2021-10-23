@@ -1,0 +1,35 @@
+{% extends "layouts/base.html" %}
+{% set headingLevel = 'h3' %}
+{% set css %}
+  {% include "css/global.css" %}
+  {% include "css/home.css" %}
+{% endset %}
+
+{% block content %}
+  <div class="wrapper section-intro">
+    <article>
+      <h1>{{ title }}</h1>
+      <p class="intro-text">
+        Stakes Profiles are data visualizations that show trends for Thoroughbred horse racing stakes races since 1991.
+      </p>
+      <div class="flow content">
+        {{ content | safe }}
+      </div>
+    </article>
+    <hr role="presentation">
+    <article class="profiles">
+      <div class="heading-wrapper">
+        <h2 id="profiles">Profiles</h2>
+        <a class="anchor-link" href="#profiles">
+          <span class="anchor-icon" aria-hidden="true">
+            {% include 'partials/anchor-icon.html' %}
+          </span>
+          <span class="visually-hidden">(permalink)</span>
+        </a>
+      </div>
+      {% for item in collections.profiles | sortByTitle %}
+      {% include 'partials/profile-listing.html' %}
+      {% endfor %}
+    </article>
+  </div>
+{% endblock %}

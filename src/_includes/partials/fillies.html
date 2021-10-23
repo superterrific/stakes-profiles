@@ -1,0 +1,20 @@
+        <article class="content">
+          <div class="heading-wrapper">
+            <h2 id="fillies-mares-1991-{{ lastYear }}">
+              {{ title }} Fillies and Mares 1991-{{ lastYear }}
+            </h2>
+            <a class="anchor-link" href="#fillies-mares-1991-{{ lastYear }}">
+              <span class="anchor-icon">
+                {% include 'partials/anchor-icon.html' %}
+              </span>
+              <span class="visually-hidden">(permalink)</span>
+            </a>
+          </div>
+
+          <p>{{ fillies | safe }}</p>
+
+          <div id="fillies-mares" class="chart-300"></div>
+
+          {% if filliesRecent %}<p>{{ filliesRecent | safe }}</p>{% endif %}
+
+        </article>

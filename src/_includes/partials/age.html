@@ -1,0 +1,127 @@
+      <article class="section-age">
+        <div class="flow content">
+          <div class="heading-wrapper">
+            <h2 id="winners-by-age-1991-{{ lastYear }}">{{ title }} Winners By Age 1991-{{ lastYear }}</h2>
+            <a class="anchor-link" href="#winners-by-age-1991-{{ lastYear }}">
+              <span class="anchor-icon">
+                {% include 'partials/anchor-icon.html' %}
+              </span>
+              <span class="visually-hidden">Permalink</span>
+            </a>
+          </div>
+          <p>
+            The majority of winners and starters since 1991 have been {{ ageIntro | safe }}.
+          </p>
+        </div>
+
+        <div id="age" class="chart-300"></div>
+
+        <div class="flow">
+          <div class="heading-wrapper">
+            <h3 id="odds-by-age-1991-{{ lastYear }}">
+              {{ title }} Odds by Age 1991-{{ lastYear }}
+            </h3>
+            <a class="anchor-link" href="#odds-by-age-1991-{{ lastYear }}">
+              <span class="anchor-icon">
+                {% include 'partials/anchor-icon.html' %}
+              </span>
+              <span class="visually-hidden">(permalink)</span>
+            </a>
+          </div>
+          <p>Odds are listed as $1 odds (e.g., $9.30 is equal to 9-1 odds on the tote board).</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Age</th>
+                <th>Average Starter Odds</th>
+                <th>Average Winner Odds</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in ageOdds %}
+              <tr>
+                <td>{{ item.age }} year-olds</td>
+                <td>{{ item.starter }}</td>
+                <td>{{ item.winner }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+        <section class="flow">
+          <div class="heading-wrapper">
+            <h3 id="all-starters-by-age-1991-{{ lastYear }}">
+              {{ title }} All Starters by Age 1991-{{ lastYear }}
+            </h3>
+            <a class="anchor-link" href="#all-starters-by-age-1991-{{ lastYear }}">
+              <span class="anchor-icon">
+                {% include 'partials/anchor-icon.html' %}
+              </span>
+              <span class="visually-hidden">(permalink)</span>
+            </a>
+          </div>
+
+          <div class="full-bleed">
+            <div id="age-all-starters" class="chart-500"></div>
+          </div>
+        </section>
+
+        <section>
+          <div class="heading-wrapper">
+            <h3 id="win-percent-by-age-1991-{{ lastYear }}">
+              {{ title }} Win % by Age 1991-{{ lastYear }}
+            </h3>
+            <a class="anchor-link" href="#win-percent-by-age-1991-{{ lastYear }}">
+              <span class="anchor-icon">
+                {% include 'partials/anchor-icon.html' %}
+              </span>
+              <span class="visually-hidden">Permalink</span>
+            </a>
+          </div>
+          <div id="age-starters-by-group" class="chart-300"></div>
+        </section>
+        <section class="flow">
+          <div class="heading-wrapper">
+            <h3 id="ae-ratio-by-age-1991-{{ lastYear }}">
+              A/E Ratio by Age 1991-{{ lastYear }}
+              <a class="anchor-link" href="#ae-ratio-by-age-1991-{{ lastYear }}">
+                <span class="anchor-icon">
+                  {% include 'partials/anchor-icon.html' %}
+                </span>
+                <span class="visually-hidden">Permalink</span>
+              </a>
+            </h3>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Age</th>
+                <th>Average vs Expected Value Ratio (A/E)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in ageAE %}
+              <tr>
+                <td>{{ item.age }} year-olds</td>
+                <td>{{ item.ratio }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <p class="meta">Numbers over 1 outperform expected value and numbers less than 1 underperform expected value. Learn more about <a href="http://www.netcapper.com/TrackTractsArchive/TT010223.htm">how A/E ratio is calculated</a> and how it should be interpreted.</p>
+        </section>
+
+        <section class="flow content">
+          <p>
+            {{ ageSummary | safe }}
+          </p>
+
+          {% if ageExtra %}
+          <p>
+            {{ ageExtra | safe }}
+          </p>
+          {% endif %}
+        </section>
+      </article>

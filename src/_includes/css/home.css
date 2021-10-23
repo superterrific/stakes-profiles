@@ -1,0 +1,12 @@
+.profiles {
+  --flow-space: 2rem;
+}
+
+.profiles h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.profiles .meta {
+  margin-top: .5rem;
+}

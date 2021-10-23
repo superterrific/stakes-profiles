@@ -1,0 +1,24 @@
+{% extends "layouts/base.html" %}
+{% set css %}
+  {% include "css/global.css" %}
+  {% include "css/content.css" %}
+{% endset %}
+
+{% block content %}
+    <article class="wrapper flow content page">
+      <h1>{{ title }}</h1>
+      {{ content | safe }}
+
+      {% if page.url === '/404.html' %}
+      <div class="flow">
+        Try one of these Stakes Profiles!
+
+        <ul>
+          {% for item in collections.profiles | limit(5) %}
+          <li><a href="{{ item.url | slug }}">{{ item.data.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </article>
+{% endblock %}

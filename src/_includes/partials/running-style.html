@@ -1,0 +1,119 @@
+      <article class="section-running-style content">
+        <div class="flow">
+          <div class="heading-wrapper">
+            <h2 id="winning-running-styles-1991-{{ lastYear }}">
+              {{ title }} Winning Running Styles 1991-{{ lastYear }}
+            </h2>
+            <a class="anchor-link" href="#winning-running-styles-1991-{{ lastYear }}">
+              <span class="anchor-icon">
+                {% include 'partials/anchor-icon.html' %}
+              </span>
+              <span class="visually-hidden">(permalink)</span>
+            </a>
+          </div>
+          <p>
+            To read the charts below, 0 on the vertical axis is the lead, any distance behind the leader is below 0 and any distance above 0 is the amount the leader is ahead of the next horse. At the bottom are the points of call as they correspond to the charts. Each line is a horse, and you can hover over the point of call for each line to see more information about the horse.
+          </p>
+          <p>
+            For example, if you hover over the bottom-most line in the first chart, at the 1/2 mile mark you’ll see that {{ runningStyleExample | safe }} behind the leader at this point in the race.
+          </p>
+          {% if runningStyleExclusion %}
+          <p>
+            {{ runningStyleExclusion | safe }}
+          </p>
+          {% endif %}
+
+        </div>
+
+        <div class="full-bleed">
+          <div id="all" class="chart-500"></div>
+        </div>
+
+
+        <div>
+          <h3>Position at the 1/2 mile mark</h3>
+          <dl class="running-style-legend">
+            <div>
+              <dt>Speed:</dt>
+              <dd>In the lead</dd>
+            </div>
+            <div>
+              <dt>Presser/Stalker:</dt>
+              <dd>Between .1 and 3 lengths off leader</dd>
+            </div>
+            <div>
+              <dt>Off the pace:</dt>
+              <dd>Between 3 and 6 lengths off the leader</dd>
+            </div>
+            <div>
+              <dt>Deep closer:</dt>
+              <dd>More than 6 lengths off the leader</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="full-bleed">
+          <div id="running-styles-stack" class="chart-500"></div>
+        </div>
+
+
+        <p>
+          The {{ title }} has been predominately won by {{ runningStyleSummary | safe }}.
+        </p>
+        <p>
+          A closer look at winning running styles by decade.
+        </p>
+
+
+        <section>
+          <div class="heading-wrapper">
+            <h3 id="winning-running-styles-1991-1999">
+              {{ title }} Winning Running Styles 1991-1999
+            </h3>
+            <a class="anchor-link" href="#winning-running-styles-1991-1999">
+              <span class="anchor-icon">
+                {% include 'partials/anchor-icon.html' %}
+              </span>
+              <span class="visually-hidden">(permalink)</span>
+            </a>
+          </div>
+
+          <div class="full-bleed">
+            <div id="nineties" class="chart-500"></div>
+          </div>
+        </section>
+
+        <section>
+          <div class="heading-wrapper">
+            <h3 id="winning-running-styles-2000-2009">
+              {{ title }} Winning Running Styles 2000-2009
+            </h3>
+            <a class="anchor-link" href="#winning-running-styles-2000-2009">
+              <span class="anchor-icon">
+                {% include 'partials/anchor-icon.html' %}
+              </span>
+              <span class="visually-hidden">(permalink)</span>
+            </a>
+          </div>
+          <div class="full-bleed">
+            <div id="aughts" class="chart-500"></div>
+          </div>
+        </section>
+
+        <section>
+          <div class="heading-wrapper">
+            <h3 id="winning-running-styles-2010-{{ lastYear }}">
+              {{ title }} Winning Running Styles 2010-{{ lastYear }}
+              </h3>
+            <a class="anchor-link" href="#winning-running-styles-2010-{{ lastYear }}">
+              <span class="anchor-icon">
+                {% include 'partials/anchor-icon.html' %}
+              </span>
+              <span class="visually-hidden">(permalink)</span>
+            </a>
+          </div>
+          <div class="full-bleed">
+            <div id="teens" class="chart-500"></div>
+          </div>
+        </section>
+      </article>

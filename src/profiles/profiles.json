@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/profile.html",
+  "permalink": "/profiles/{{ title | slug }}/index.html"
+}

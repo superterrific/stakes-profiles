@@ -1,0 +1,21 @@
+.content h2 {
+  scroll-margin-top: 1ex;
+}
+
+.content ul {
+  margin-top: .5rem;
+  margin-bottom: 2rem;
+}
+
+.content li  {
+  line-height: 1.4;
+  margin-bottom: .5rem;
+}
+
+.content .meta {
+  font-size: 1rem;
+}
+
+.page .heading-wrapper {
+  margin-top: 4rem;
+}

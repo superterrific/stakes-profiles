@@ -1,0 +1,60 @@
+        <article class="content">
+          <div class="flow">
+            <div class="heading-wrapper">
+              <h2 id="winners-bettors-choice-field-size-1991-{{ lastYear }}">
+                {{ title }} Bettors’ Choice and Field Size 1991-{{ lastYear }}
+              </h2>
+              <a class="anchor-link" href="#winners-bettors-choice-field-size-1991-{{ lastYear }}">
+                <span class="anchor-icon">
+                  {% include 'partials/anchor-icon.html' %}
+                </span>
+                <span class="visually-hidden">(permalink)</span>
+              </a>
+            </div>
+            <p>Bettors’ Choice is the ranked order of the field by final odds: The favorite is the first choice, the second favorite is the second choice and so on. For example, 1991 winner {{ choiceExample | safe }}.
+          </div>
+
+          <div class="full-bleed">
+            <div id="choice-field" class="chart-500"></div>
+          </div>
+
+          <div class="wrapper-stats">
+            <div class="stats">
+              <div class="stats-section">
+                <h3>1991-{{ lastYear }}</h3>
+                <dl class="dl-wide">
+                  <div>
+                    <dt>Average Choice of Winner:</dt>
+                    <dd>{{ choiceStats.averageFull }}</dd>
+                  </div>
+                  <div>
+                    <dt>Average Field Size:</dt>
+                    <dd>{{ fieldSize.averageFull }}</dd>
+                  </div>
+                  <div>
+                    <dt>Average Favorite Finish Position:</dt>
+                    <dd>{{ favFinish.averageFull }}</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="stats-section">
+                <h3>2010-{{ lastYear }}</h3>
+                <dl class="dl-wide">
+                  <div>
+                    <dt>Average Choice of Winner:</dt>
+                    <dd>{{ choiceStats.averageDecade }}</dd>
+                  </div>
+                  <div>
+                    <dt>Average Field Size:</dt>
+                    <dd>{{ fieldSize.averageDecade }}</dd>
+                  </div>
+                  <div>
+                    <dt>Average Favorite Finish Position:</dt>
+                    <dd>{{ favFinish.averageDecade }}</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <div id="favs-bar"></div>
+          </div>
+        </article>

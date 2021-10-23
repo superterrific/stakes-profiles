@@ -1,0 +1,87 @@
+        <article class="content">
+          <div class="flow">
+            <div class="heading-wrapper">
+              <h2 id="winners-odds-payouts-1991-{{ lastYear }}">
+                {{ title }} Winners Odds & Payouts 1991-{{ lastYear }}
+              </h2>
+              <a class="anchor-link" href="#winners-odds-payouts-1991-{{ lastYear }}">
+                <span class="anchor-icon">
+                  {% include 'partials/anchor-icon.html' %}
+                </span>
+                <span class="visually-hidden">(permalink)</span>
+              </a>
+            </div>
+            <p>Odds are shown as listed in the <a href="https://www.equibase.com/static/chart/pdf/">results charts</a>. <span>Hover-over or touch each bar for $2 payout.</span> </p>
+
+            {% if oddsOutliers %}
+            <p>{{ oddsOutliers | safe }}. Outliers are included in the averages and medians.</p>
+            {% endif %}
+
+            {% if oddsAdditional %}
+            <p>{{ oddsAdditional | safe }}.</p>
+            {% endif %}
+          </div>
+
+          <div class="full-bleed">
+            <div id="odds" class="chart-500"></div>
+          </div>
+
+          <div class="wrapper-stats">
+            <div class="stats">
+              <div class="stats-section">
+                <h3>1991-{{ lastYear }}</h3>
+                <dl>
+                  <div>
+                    <dt>Average $1 Odds:</dt>
+                    <dd>{{ oddsStats.averageFull }}</dd>
+                  </div>
+                  <div>
+                    <dt>Median $1 Odds:</dt>
+                    <dd>{{ oddsStats.medianFull }}</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="stats-section">
+                <h3>2010-{{ lastYear }}</h3>
+                <dl>
+                  <div>
+                    <dt>Average $1 Odds:</dt>
+                    <dd>{{ oddsStats.averageDecade }}</dd>
+                  </div>
+                  <div>
+                    <dt>Median $1 Odds:</dt>
+                    <dd>{{ oddsStats.medianDecade }}</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <div class="stats">
+              <div class="stats-section">
+                <h3>1991-{{ lastYear }}</h3>
+                <dl>
+                  <div>
+                    <dt>Average $2 Win:</dt>
+                    <dd>{{ winStats.averageFull }}</dd>
+                  </div>
+                  <div>
+                    <dt>Median $2 Win:</dt>
+                    <dd>{{ winStats.medianFull }}</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="stats-section">
+                <h3>2010-{{ lastYear }}</h3>
+                <dl>
+                  <div>
+                    <dt>Average $2 Win:</dt>
+                    <dd>{{ winStats.averageDecade }}</dd>
+                  </div>
+                  <div>
+                    <dt>Median $2 Win:</dt>
+                    <dd>{{ winStats.medianDecade }}</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </article>

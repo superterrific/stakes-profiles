@@ -1,0 +1,36 @@
+        <article class="section-last-track content">
+          <div class="flow">
+            <div class="heading-wrapper">
+              <h2 id="winners-last-track-raced-days-since-1991-{{ lastYear }}">
+                {{ title }} Winners Last Track & Days Since 1991-{{ lastYear }}
+              </h2>
+              <a class="anchor-link" href="#winners-last-track-raced-days-since-1991-{{ lastYear }}">
+                <span class="anchor-icon">
+                  {% include 'partials/anchor-icon.html' %}
+                </span>
+                <span class="visually-hidden">(permalink)</span>
+              </a>
+            </div>
+            <p>The majority of {{ title }} winners have come from {{ lastTrack | safe }}.</p>
+          </div>
+
+          <div class="full-bleed">
+            <div class="wrapper-stats">
+              <div id="last-track" class="chart-200 chart-last-track"></div>
+
+              <div class="dl-wide">
+                <h3>Days Since Last Race 1991-{{ lastYear }}</h3>
+                <dl>
+                  <div>
+                    <dt>Average Days Since Last Race:</dt>
+                    <dd>{{ daysSince.average }}</dd>
+                  </div>
+                  <div>
+                    <dt>Median Days Since Last Race:</dt>
+                    <dd>{{ daysSince.median }}</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </article>

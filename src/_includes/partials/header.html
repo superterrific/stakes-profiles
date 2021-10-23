@@ -1,0 +1,35 @@
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+      <div class="wrapper-header">
+        <div class="title-section">
+          <div>
+            <div class="site-title-sm">Thoroughbred Horse Racing</div>
+            <div class="site-title">
+              <a href="/">Stakes Profiles</a>
+            </div>
+          </div>
+          <div>
+            <button id="menu" class="menu no-js">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon-2x" width="20" height="20" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+                <span>Menu</span>
+            </button>
+          </div>
+        </div>
+
+        <nav id="site-nav" aria-label="Primary">
+          <ul class="navigation" role="list">
+            {% for item in collections.profiles | sortByTitle %}
+            <li><a href="{{ item.url | slug }}">{{ item.data.title | safe }}</a></li>
+            {% endfor %}
+            <li><a href="/about/">About Stakes Profiles</a></li>
+            <li><a href="/">Home</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+    <script>
+      document.getElementById('menu').classList.remove('no-js');
+      document.getElementById('site-nav').classList.add('site-nav');
+    </script>

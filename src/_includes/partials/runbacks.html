@@ -1,0 +1,20 @@
+      <article class="content">
+        <div class="flow">
+          <div class="heading-wrapper">
+            <h2 id="multiple-winners-run-backs-1991-{{ lastYear }}">
+              {{ title }} Multiple Winners & Run Backs 1991-{{ lastYear }}
+            </h2>
+            <a class="anchor-link" href="#multiple-winners-run-backs-1991-{{ lastYear }}">
+              <span class="anchor-icon">
+                {% include 'partials/anchor-icon.html' %}
+              </span>
+              <span class="visually-hidden">(permalink)</span>
+            </a>
+          </div>
+          <p>{{ runbackIntro | safe }}</p>
+          <p>A run back is defined as a starter who made a prior start in the race.{% if runbackExample %} For example {{ runbackExample | safe }}.{% endif %}</p>
+          {% if runbackExtra %}<p>{{ runbackExtra | safe }}</p>{% endif %}
+        </div>
+        <div id="runbacks" class="chart-300"></div>
+        <p>{{ runbackSummary | safe }}</p>
+      </article>

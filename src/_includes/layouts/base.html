@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% include 'partials/meta.html' %}
+  {% if '/profiles' in page.url %}
+  <script src="https://www.gstatic.com/charts/loader.js" defer></script>
+  <script src="/js/{{ title | slug }}/{{ title | slug }}-bars-stacks.js" defer></script>
+  <script src="/js/{{ title | slug }}/{{ title | slug }}-choice-field-odds.js" defer></script>
+  <script src="/js/{{ title | slug }}/{{ title | slug }}-running-styles.js" defer></script>
+  {% endif %}
+  <style>{{ css | cssmin | safe }}</style>
+</head>
+<body id="top">
+  {% include 'partials/header.html' %}
+  <main id="main-content" tabindex="-1">
+    {% block content %}{% endblock %}
+    {% if page.url !== '/404.html' %}
+    <p class="kofi">
+      <a href="https://ko-fi.com/J3J06MMCZ" rel="noopener" rel="noreferrer"><img src="/img/kofi-button-dark.png" width="136" height="31" alt="Enjoying this site? Leave me a tip at Ko-fi!"></a>
+    </p>
+    {% endif %}
+  </main>
+  {% include 'partials/footer.html' %}
+
+  <script>let navigation=document.getElementById("site-nav"),toggler=document.getElementById("menu");toggler.addEventListener("click",(function(){navigation.classList.toggle("active")}));</script>
+
+</body>
+</html>
