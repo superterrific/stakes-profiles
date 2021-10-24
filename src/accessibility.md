@@ -13,21 +13,21 @@ This site has been built using W3C standards for HTML and CSS. Any person using 
 In addition to being tested on modern browsers, this site has been checked for screen reader ease of use using VoiceOver with Safari on Mac. It has also been audited using [WAVE](https://wave.webaim.org/) and [Arc Toolkit](https://www.tpgi.com/arc-platform/arc-toolkit/) as well as checked manually.
 
 ## Known issues
-There are several known accessibility issues with this site.
-
 The interactive charts on this site are built using [Google Charts](https://developers.google.com/chart/) and there are two major accessibility issues with them.
 
 1. They are not accessible via keyboard.
-2. They announce a large amount of extraneous information when read with a screen reader.
+2. Screen readers have to announce a large amount of extraneous information before announcing the data.
 
 ### Information for screen reader users
 There are two major elements to each chart.
 
-1. Images used to display the chart
+1. Images used to display the chart.
 2. Tabular representation of the data within the chart.
 
-Unfortunately the charts are structured to announce all of the images before announcing the tabular data. In some cases this will be upwards of 50 images get announced as "an image" before the data.
+Unfortunately the charts are structured to announce all of the images before announcing the tabular data. In some cases this will be upwards of 50 images announced as "an image".
 
-Since this data is coming Google I don't have access to change the order or hide the images from screen readers so that only the tabular representation of the data is announced. I considered hiding the charts from screen readers all together but don't currently have the time to replicate the data to provide a better screen reader experience. If you feel it's a better experience to hid the charts from screen readers without providing the data to screen readers I'd love to hear your thoughts.
+Since this data is coming Google I don't have access to change the order or hide the images from screen readers so that only the tabular representation of the data is announced.
+
+I considered hiding the charts from screen readers all together, but don't currently have the time to replicate all the data to provide a better screen reader experience. If you're using a screen reader and feel it's a better experience to hide the charts without providing the data I'd love to hear your thoughts.
 
 You can contact me [via email with this form](https://airtable.com/shrIUn5ZgJS5yWBqR) or [file an issue](https://github.com/superterrific/stakes-profiles/issues) at GitHub.

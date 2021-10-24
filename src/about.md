@@ -11,7 +11,7 @@ The charts use [Google charts](https://developers.google.com/chart/) and data ma
 
 Google charts provided a relatively straightforward way to produce simple charts, but presented a host of issues, mainly around accessibility and performance. For more information see the [Accessibility Statement](/accessibility-statement) for details.
 
-This project was conceived, created and maintained by [Dana Byerly](https://danabyerly.com) and is built with hand-written HTML, CSS and JavaScript. The favicon and social image is from [Emoji Terra](https://emojiterra.com/pt/tendencia-de-crescimento/). See here for information about the [concept and implementation of the project](https://danabyerly.com/projects/stakes-profiles/).
+This project was conceived, created and maintained by [Dana Byerly](https://danabyerly.com) and is built with hand-written HTML, CSS and JavaScript. The favicon and social image is from [EmojiTerra](https://emojiterra.com/pt/tendencia-de-crescimento/). There is more information about the [concept and implementation of the project](https://danabyerly.com/projects/stakes-profiles/) at my personal site.
 
 
 ## What's included in each profile
