@@ -5,14 +5,14 @@
 {% endset %}
 
 {% block content %}
-    <article class="wrapper flow content page">
+    <article class="wrapper flow content">
       <h1>{{ title }}</h1>
-      {{ content | safe }}
-
+      <div class="page">
+        {{ content | safe }}
+      </div>
       {% if page.url === '/404.html' %}
       <div class="flow">
         Try one of these Stakes Profiles!
-
         <ul>
           {% for item in collections.profiles | limit(5) %}
           <li><a href="{{ item.url | slug }}">{{ item.data.title }}</a></li>

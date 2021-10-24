@@ -1,7 +1,7 @@
 {%- set pageTitle = title + ' - ' + site.name -%}
 {%- set siteDescription = site.siteDescription -%}
 {% if '/profiles' in page.url %}
-{%- set siteDescription = site.metaDesc + title -%}
+{%- set siteDescription = site.metaDesc + title + ' between 1991-' + lastYear -%}
 {% endif %}
 
 {%- if page.url === '/' -%}

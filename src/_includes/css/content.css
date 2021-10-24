@@ -19,3 +19,11 @@
 .page .heading-wrapper {
   margin-top: 4rem;
 }
+
+.page > * + * {
+  margin-top: 1.5rem;
+}
+
+.page {
+  margin-bottom: 3rem;
+}
