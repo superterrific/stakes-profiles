@@ -2,7 +2,8 @@
   --flow-space: 2rem;
 }
 
-.profiles h3 {
+.profiles h3,
+.tagged h2 {
   font-size: 1.3rem;
   font-weight: 400;
 }
