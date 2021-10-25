@@ -356,9 +356,3 @@ a.skip-link:active {
   overflow: hidden;
   white-space: nowrap;
 }
-
-.no-js-text {
-  background-color: var(--color-blue-light);
-  border: 1px solid var(--color-blue-dark);
-  padding: 1rem;
-}
