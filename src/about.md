@@ -27,7 +27,7 @@ Races for horses older than 3-years-old include
 * Multiple winners and "run backs" (horses who have made more than one start in the race)
 
 Open company races, or races that are open to any sex, include
-* How fillies and mares have preformed (if any fillies or mares raced in the time period)
+* How fillies and mares have performed (if any fillies or mares raced in the time period)
 
 Races for 2-year-olds include
 * Number of career starts prior to race
