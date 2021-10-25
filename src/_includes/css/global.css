@@ -210,8 +210,9 @@ article > * + * {
 }
 
 .intro-text {
-  font-size: 1.6rem;
-  font-size: clamp(1.4rem, 3vw, 1.6rem);
+  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  margin-top: 2rem;
 }
 
 .kofi {
@@ -285,6 +286,12 @@ hr {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.icon-2x {
+  width: 2em;
+  height: 2em;
+  vertical-align: -.5em;
 }
 
 /* menu ------------------------------------------------------------- */
