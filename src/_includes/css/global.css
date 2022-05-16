@@ -82,6 +82,7 @@ a:focus {
   outline: 2px solid var(--color-orange);
   outline-offset: .2rem;
   text-decoration: none;
+  overflow: auto;
 }
 
 /* Typography ------------------------------------------------------- */
@@ -120,6 +121,7 @@ header a:focus,
   outline-offset: .2rem;
   text-decoration: none;
   color: var(--color-blue-light);
+  overflow: auto;
 }
 
 .site-title a {
