@@ -5,14 +5,15 @@
   "main": ".eleventy.js",
   "scripts": {
     "start": "npx eleventy --serve",
+    "build": "npx eleventy",
     "production": "NODE_ENV=production eleventy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0",
-    "browser-sync": "^2.27.5",
+    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-upgrade-help": "^2.0.5",
     "clean-css": "^5.2.1",
     "html-minifier": "^4.0.0",
     "luxon": "^1.28.0",

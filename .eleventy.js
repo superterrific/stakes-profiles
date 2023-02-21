@@ -64,12 +64,6 @@ module.exports = config => {
   config.addPassthroughCopy('./src/img/');
   config.addPassthroughCopy('./src/js/');
 
-  // Open the browser on launch
-  config.setBrowserSyncConfig({
-    open: true,
-    ghostMode: false
-  });
-
   // Markdown and anchor options
     const markdownOptions = {
       html: true,
