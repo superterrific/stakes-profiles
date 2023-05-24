@@ -203,7 +203,7 @@ article > * + * {
 }
 
 .content {
-  --flow-space: 2rem;
+  --flow-space: 1.5rem;
 }
 
 .content p {
@@ -222,7 +222,6 @@ article > * + * {
   justify-content: center;
   margin: 1.5rem auto;
 }
-
 
 /* Wrappers --------------------------------------------------------- */
 .wrapper {
@@ -296,7 +295,7 @@ hr {
   vertical-align: -.5em;
 }
 
-/* menu ------------------------------------------------------------- */
+/* Menu ------------------------------------------------------------- */
 .menu {
   color: inherit;
   border: 0;
